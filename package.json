@@ -26,6 +26,7 @@
     "test:check-examples": "node ./scripts/smoke/check.js",
     "test:vite-ci": "turbo run test --filter=astro",
     "test:e2e": "cd packages/astro && pnpm playwright install && pnpm run test:e2e",
+    "test:e2e:replay": "cd packages/astro && pnpm playwright install && pnpm run test:e2e:replay",
     "test:e2e:match": "cd packages/astro && pnpm playwright install && pnpm run test:e2e:match",
     "test:e2e:hosts": "turbo run test:hosted",
     "benchmark": "astro-benchmark",
@@ -79,6 +80,7 @@
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.8",
     "@changesets/cli": "^2.26.1",
+    "@replayio/playwright": "^1.0.8",
     "@types/node": "^18.16.18",
     "@typescript-eslint/eslint-plugin": "6.0.0",
     "@typescript-eslint/parser": "6.0.0",

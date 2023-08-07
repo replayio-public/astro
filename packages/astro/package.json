@@ -112,6 +112,7 @@
     "test": "pnpm run test:unit && mocha --exit --timeout 30000 --ignore **/lit-element.test.js && mocha --timeout 30000 **/lit-element.test.js",
     "test:match": "mocha --timeout 30000 -g",
     "test:e2e": "playwright test",
+    "test:e2e:replay": "playwright test --project replay-chromium --reporter=@replayio/playwright/reporter,line",
     "test:e2e:match": "playwright test -g"
   },
   "dependencies": {
@@ -176,6 +177,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.29.2",
+    "@replayio/playwright": "^1.0.8",
     "@types/babel__generator": "^7.6.4",
     "@types/babel__traverse": "^7.20.1",
     "@types/chai": "^4.3.5",
